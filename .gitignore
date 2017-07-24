@@ -1,4 +1,7 @@
 CosmicPi_Implmnt
+work
+
 *.log
-*.log.bak
-synlog.tcl
+*.bak
+*.mti
+*.tcl

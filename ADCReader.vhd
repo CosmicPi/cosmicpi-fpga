@@ -6,25 +6,26 @@ use IEEE.NUMERIC_STD.ALL;
 -- Provides an abstraction layer on of physicaly ADC.
 -- NOTE: Generally this module is redundant, but it provides abstraction on top of hardware.
 
-entity ADC_Reader is
+entity ADCReader is
     generic (
-      C_RESOLUTION      : in STD_LOGIC_VECTOR (5 downto 0) := 10
+      C_RESOLUTION      : INTEGER := 10
     );
 
     port (I_CLK           : in STD_LOGIC;
           I_RST           : in STD_LOGIC;
-          I_VALUE_READY         : in STD_LOGIC;
-          I_VALUE      : in STD_LOGIC_VECTOR ((C_RESOLUTION - 1) downto 0);
+          I_VALUE_READY    : in STD_LOGIC;
           O_VALUE_READY  : out STD_LOGIC;
-          O_VALUE        : out STD_LOGIC
+      
+	I_VALUE      : in STD_LOGIC_VECTOR ((C_RESOLUTION - 1) downto 0);
+	O_VALUE        : out STD_LOGIC_VECTOR ((C_RESOLUTION - 1) downto 0)
     );
-end ADC_Reader;
+end ADCReader;
 
 
-architecture Behavioral of ADC_Reader is
+architecture Behavioral of ADCReader is
 
 -- Constants
-constant ADC_RESOLUTION : unsigned(5 downto 0) := unsigned(C_RESOLUTION);
+-- constant ADC_RESOLUTION : unsigned(5 downto 0) := unsigned(C_RESOLUTION);
 
 begin
   -- ReadyToRead: process (I_READY) begin
