@@ -1,9 +1,20 @@
+# iceCUBE
 CosmicPi_Implmnt
 work
 
+# Altera
 *.log
 *.bak
 *.mti
 *.tcl
 *.wlf
 *.txt
+*.do
+wlf*
+
+# Vivado
+*.cache
+*.hw
+*.runs
+*.sim
+*.ip_user_files
