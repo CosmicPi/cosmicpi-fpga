@@ -9,12 +9,12 @@ entity EventDetector is
   );
 
     port (
-      I_ADC1 : in STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0);
-      I_ADC2 : in STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0);
-      I_TRESHOLD1 : in STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0);
-      I_TRESHOLD2 : in STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0);
-      O_DETECTED : out STD_LOGIC;
-      I_ENABLED : in STD_LOGIC
+      I_ADC1        : in STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0);
+      I_ADC2        : in STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0);
+      I_TRESHOLD1   : in STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0);
+      I_TRESHOLD2   : in STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0);
+      O_DETECTED    : out STD_LOGIC;
+      I_ENABLED     : in STD_LOGIC
     );
 end EventDetector;
 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="EventDetector_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="EventDetector_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="206000001fs"></ZoomEndTime>
+      <Cursor1Time time="65000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject type="array" fp_name="/EventDetector_tb/I_ADC1">
+      <obj_property name="ElementShortName">I_ADC1[9:0]</obj_property>
+      <obj_property name="ObjectShortName">I_ADC1[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/EventDetector_tb/I_ADC2">
+      <obj_property name="ElementShortName">I_ADC2[9:0]</obj_property>
+      <obj_property name="ObjectShortName">I_ADC2[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/EventDetector_tb/I_TRESHOLD1">
+      <obj_property name="ElementShortName">I_TRESHOLD1[9:0]</obj_property>
+      <obj_property name="ObjectShortName">I_TRESHOLD1[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/EventDetector_tb/I_TRESHOLD2">
+      <obj_property name="ElementShortName">I_TRESHOLD2[9:0]</obj_property>
+      <obj_property name="ObjectShortName">I_TRESHOLD2[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/EventDetector_tb/O_DETECTED">
+      <obj_property name="ElementShortName">O_DETECTED</obj_property>
+      <obj_property name="ObjectShortName">O_DETECTED</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/EventDetector_tb/I_ENABLED">
+      <obj_property name="ElementShortName">I_ENABLED</obj_property>
+      <obj_property name="ObjectShortName">I_ENABLED</obj_property>
+   </wvobject>
+</wave_config>
