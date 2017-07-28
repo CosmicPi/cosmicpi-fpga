@@ -31,7 +31,7 @@ ARCHITECTURE behavior OF ADCReader_tb IS
    signal O_VALUE_READY     : STD_LOGIC;
    signal O_VALUE           : STD_LOGIC_VECTOR ((C_RESOLUTION - 1) downto 0) := (others => '0');
 
-   constant iCLK_period : time := 10 ns;
+   constant C_CLK_PERIOD : time := 10 ns;
  
 BEGIN
  
@@ -46,9 +46,9 @@ BEGIN
 
    ClockGeneratorProcess: process begin
 		I_CLK <= '0';
-		wait for iCLK_period / 2;
+		wait for C_CLK_PERIOD / 2;
 		I_CLK <= '1';
-		wait for iCLK_period / 2;
+		wait for C_CLK_PERIOD / 2;
    end process;
  
  
