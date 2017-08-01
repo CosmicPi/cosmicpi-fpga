@@ -7,10 +7,11 @@ use IEEE.NUMERIC_STD.ALL;
 entity Top is
      generic (
         -- Constants    
-        C_ADC_RESOLUTION    : INTEGER := 10;
-        C_CB_DATA_WIDTH     : INTEGER := 10;
-        C_CB_SIZE           : INTEGER := 20;
-        C_CB_COUNTER_BITS   : INTEGER := 8
+        C_PEAK_TIME_RESOLUTION  : INTEGER := 8;
+        C_ADC_RESOLUTION        : INTEGER := 10;
+        C_CB_DATA_WIDTH         : INTEGER := 10;
+        C_CB_SIZE               : INTEGER := 20;
+        C_CB_COUNTER_BITS       : INTEGER := 8
      );
 
      Port ( 
@@ -63,9 +64,13 @@ END COMPONENT;
 -- DECLARATION: Event Detector
 COMPONENT EventDetector
     generic (
-        C_ADC_RESOLUTION      : INTEGER := C_ADC_RESOLUTION
+        C_ADC_RESOLUTION        : INTEGER := C_ADC_RESOLUTION;
+        C_PEAK_TIME_RESOLUTION  : INTEGER := C_PEAK_TIME_RESOLUTION
     );
     PORT(
+        I_CLK       : in STD_LOGIC;
+        I_RST       : in STD_LOGIC;
+        I_SAMPLES   : in STD_LOGIC_VECTOR ((C_PEAK_TIME_RESOLUTION - 1) downto 0);
         I_ADC1      : in STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0);
         I_ADC2      : in STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0);
         I_TRESHOLD1 : in STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0);
@@ -83,20 +88,32 @@ signal S_ADC2_VALUE         : STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0)
 
 -- Candidates to be put in separated module
 signal S_EVENT_DETECTED     : STD_LOGIC;
--- TODO: Treshold configuration module or to built in EventDetector module
+
+-- TODO: Should be a part of a changeable (by SPI) register
 signal S_TRESHOLD1          : STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0) := STD_LOGIC_VECTOR(to_unsigned(100, C_ADC_RESOLUTION));
 signal S_TRESHOLD2          : STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0) := STD_LOGIC_VECTOR(to_unsigned(100, C_ADC_RESOLUTION));
+signal S_PEAK_TIME          : STD_LOGIC_VECTOR ((C_PEAK_TIME_RESOLUTION - 1) downto 0) := STD_LOGIC_VECTOR(to_unsigned(3, C_PEAK_TIME_RESOLUTION));
+signal S_TIMESTAMP          : STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
 
 signal S_CB1_ERROR          : STD_LOGIC;
 signal S_CB2_ERROR          : STD_LOGIC;
 signal S_CB1_EMPTY          : STD_LOGIC;
 signal S_CB2_EMPTY          : STD_LOGIC;
-signal S_CB1_SIZE           : STD_LOGIC_VECTOR((C_CB_COUNTER_BITS - 1) downto 0);
-signal S_CB2_SIZE           : STD_LOGIC_VECTOR((C_CB_COUNTER_BITS - 1) downto 0);
+signal S_CB1_SIZE           : STD_LOGIC_VECTOR ((C_CB_COUNTER_BITS - 1) downto 0);
+signal S_CB2_SIZE           : STD_LOGIC_VECTOR ((C_CB_COUNTER_BITS - 1) downto 0);
 signal S_CB1_DATA           : STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0);
 signal S_CB2_DATA           : STD_LOGIC_VECTOR ((C_ADC_RESOLUTION - 1) downto 0);
 
 BEGIN
+    -- TODO: Think about moving to separated module
+    TimestampCounter: process (I_CLK, I_RST, I_PPS) begin
+        if (I_RST = '0' or I_PPS = '1') then
+                S_TIMESTAMP <= (others => '0');
+        elsif (rising_edge(I_CLK)) then
+                S_TIMESTAMP <= S_TIMESTAMP + 1;
+        end if;
+    end process;
+
     iADCReader1: ADCReader PORT MAP (
         I_RST => I_RST,
         I_CLK => I_CLK,
@@ -116,6 +133,9 @@ BEGIN
     );
     
     iEventDetector: EventDetector PORT MAP (
+        I_CLK => I_CLK,
+        I_RST => I_RST,
+        I_SAMPLES => S_PEAK_TIME,
         I_ADC1  => S_ADC1_VALUE,
         I_ADC2  => S_ADC2_VALUE,
         I_TRESHOLD1 => S_TRESHOLD1, 
