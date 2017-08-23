@@ -144,6 +144,19 @@ BEGIN
         I_ENABLED   => '1'
     );
     
+    CircularBufferAGenerator: for i in 0 to 5 generate begin
+        iCircularBuffer: CircularBuffer PORT MAP (
+                I_CLK => I_CLK,
+                I_ENR => '0',
+                I_ENW => S_ADC1_READY,
+                O_SIZE => S_CB1_SIZE,
+                O_DATA => S_CB1_DATA,
+                I_DATA => S_ADC1_VALUE,
+                O_EMPTY => S_CB1_EMPTY,
+                O_ERROR => S_CB1_ERROR
+            );
+    end generate;
+    
     iCircularBuffer1: CircularBuffer PORT MAP (
         I_CLK => I_CLK,
         I_ENR => '0',

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="EventStack_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="EventStack_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="35538131714fs"></ZoomEndTime>
+      <Cursor1Time time="311170000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject type="logic" fp_name="/EventStack_tb/uut/I_CLK">
+      <obj_property name="ElementShortName">I_CLK</obj_property>
+      <obj_property name="ObjectShortName">I_CLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/EventStack_tb/uut/I_PPS">
+      <obj_property name="ElementShortName">I_PPS</obj_property>
+      <obj_property name="ObjectShortName">I_PPS</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/EventStack_tb/uut/I_DETECTED">
+      <obj_property name="ElementShortName">I_DETECTED</obj_property>
+      <obj_property name="ObjectShortName">I_DETECTED</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/EventStack_tb/uut/I_DATA">
+      <obj_property name="ElementShortName">I_DATA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">I_DATA[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/EventStack_tb/uut/O_DATA">
+      <obj_property name="ElementShortName">O_DATA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">O_DATA[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/EventStack_tb/uut/S_STORE_ENABLED">
+      <obj_property name="ElementShortName">S_STORE_ENABLED</obj_property>
+      <obj_property name="ObjectShortName">S_STORE_ENABLED</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/EventStack_tb/uut/S_RAM_ADDRESS_A">
+      <obj_property name="ElementShortName">S_RAM_ADDRESS_A[7:0]</obj_property>
+      <obj_property name="ObjectShortName">S_RAM_ADDRESS_A[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/EventStack_tb/uut/S_RAM_WRITE_ENABLE_A">
+      <obj_property name="ElementShortName">S_RAM_WRITE_ENABLE_A</obj_property>
+      <obj_property name="ObjectShortName">S_RAM_WRITE_ENABLE_A</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/EventStack_tb/uut/S_RAM_DATA_IN_A">
+      <obj_property name="ElementShortName">S_RAM_DATA_IN_A[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S_RAM_DATA_IN_A[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/EventStack_tb/uut/S_RAM_DATA_OUT_A">
+      <obj_property name="ElementShortName">S_RAM_DATA_OUT_A[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S_RAM_DATA_OUT_A[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/EventStack_tb/uut/S_RAM_ADDRESS_B">
+      <obj_property name="ElementShortName">S_RAM_ADDRESS_B[7:0]</obj_property>
+      <obj_property name="ObjectShortName">S_RAM_ADDRESS_B[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/EventStack_tb/uut/S_RAM_WRITE_ENABLE_B">
+      <obj_property name="ElementShortName">S_RAM_WRITE_ENABLE_B</obj_property>
+      <obj_property name="ObjectShortName">S_RAM_WRITE_ENABLE_B</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/EventStack_tb/uut/S_RAM_DATA_IN_B">
+      <obj_property name="ElementShortName">S_RAM_DATA_IN_B[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S_RAM_DATA_IN_B[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/EventStack_tb/uut/S_RAM_DATA_OUT_B">
+      <obj_property name="ElementShortName">S_RAM_DATA_OUT_B[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S_RAM_DATA_OUT_B[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/EventStack_tb/uut/S_SWITCH">
+      <obj_property name="ElementShortName">S_SWITCH</obj_property>
+      <obj_property name="ObjectShortName">S_SWITCH</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/EventStack_tb/uut/S_RAM_READ_ADDRESS">
+      <obj_property name="ElementShortName">S_RAM_READ_ADDRESS[7:0]</obj_property>
+      <obj_property name="ObjectShortName">S_RAM_READ_ADDRESS[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/EventStack_tb/uut/S_RAM_WRITE_ADDRESS">
+      <obj_property name="ElementShortName">S_RAM_WRITE_ADDRESS[7:0]</obj_property>
+      <obj_property name="ObjectShortName">S_RAM_WRITE_ADDRESS[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/EventStack_tb/uut/S_EVENT_SAMPLES_N">
+      <obj_property name="ElementShortName">S_EVENT_SAMPLES_N[7:0]</obj_property>
+      <obj_property name="ObjectShortName">S_EVENT_SAMPLES_N[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/EventStack_tb/uut/C_NUMBER_OF_SAMPLES">
+      <obj_property name="ElementShortName">C_NUMBER_OF_SAMPLES</obj_property>
+      <obj_property name="ObjectShortName">C_NUMBER_OF_SAMPLES</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/EventStack_tb/uut/C_DATA_WIDTH">
+      <obj_property name="ElementShortName">C_DATA_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">C_DATA_WIDTH</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/EventStack_tb/uut/addr_width">
+      <obj_property name="ElementShortName">addr_width</obj_property>
+      <obj_property name="ObjectShortName">addr_width</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/EventStack_tb/uut/data_width">
+      <obj_property name="ElementShortName">data_width</obj_property>
+      <obj_property name="ObjectShortName">data_width</obj_property>
+   </wvobject>
+</wave_config>

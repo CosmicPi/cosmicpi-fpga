@@ -3,74 +3,68 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="Top_tb_behav.wdb" id="1">
+      <db_ref path="EventDetector_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="Top_tb" />
+            <top_module name="EventDetector_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="3007978732fs"></ZoomEndTime>
+      <ZoomEndTime time="4383969004fs"></ZoomEndTime>
       <Cursor1Time time="311170000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="138"></ValueColumnWidth>
+      <ValueColumnWidth column_width="134"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
-   <wvobject type="logic" fp_name="/Top_tb/I_CLK">
+   <WVObjectSize size="12" />
+   <wvobject type="logic" fp_name="/EventDetector_tb/I_CLK">
       <obj_property name="ElementShortName">I_CLK</obj_property>
       <obj_property name="ObjectShortName">I_CLK</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/Top_tb/I_RST">
+   <wvobject type="logic" fp_name="/EventDetector_tb/I_RST">
       <obj_property name="ElementShortName">I_RST</obj_property>
       <obj_property name="ObjectShortName">I_RST</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/Top_tb/I_ADC1_READY">
-      <obj_property name="ElementShortName">I_ADC1_READY</obj_property>
-      <obj_property name="ObjectShortName">I_ADC1_READY</obj_property>
+   <wvobject type="array" fp_name="/EventDetector_tb/I_ADC1">
+      <obj_property name="ElementShortName">I_ADC1[9:0]</obj_property>
+      <obj_property name="ObjectShortName">I_ADC1[9:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/Top_tb/I_ADC2_READY">
-      <obj_property name="ElementShortName">I_ADC2_READY</obj_property>
-      <obj_property name="ObjectShortName">I_ADC2_READY</obj_property>
+   <wvobject type="array" fp_name="/EventDetector_tb/I_ADC2">
+      <obj_property name="ElementShortName">I_ADC2[9:0]</obj_property>
+      <obj_property name="ObjectShortName">I_ADC2[9:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Top_tb/I_ADC1_VALUE">
-      <obj_property name="ElementShortName">I_ADC1_VALUE[9:0]</obj_property>
-      <obj_property name="ObjectShortName">I_ADC1_VALUE[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject type="logic" fp_name="/EventDetector_tb/O_DETECTED">
+      <obj_property name="ElementShortName">O_DETECTED</obj_property>
+      <obj_property name="ObjectShortName">O_DETECTED</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Top_tb/I_ADC2_VALUE">
-      <obj_property name="ElementShortName">I_ADC2_VALUE[9:0]</obj_property>
-      <obj_property name="ObjectShortName">I_ADC2_VALUE[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject type="logic" fp_name="/EventDetector_tb/I_ENABLED">
+      <obj_property name="ElementShortName">I_ENABLED</obj_property>
+      <obj_property name="ObjectShortName">I_ENABLED</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/Top_tb/I_PPS">
-      <obj_property name="ElementShortName">I_PPS</obj_property>
-      <obj_property name="ObjectShortName">I_PPS</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/Top_tb/C_ADC_RESOLUTION">
+   <wvobject type="other" fp_name="/EventDetector_tb/C_ADC_RESOLUTION">
       <obj_property name="ElementShortName">C_ADC_RESOLUTION</obj_property>
       <obj_property name="ObjectShortName">C_ADC_RESOLUTION</obj_property>
    </wvobject>
-   <wvobject type="other" fp_name="/Top_tb/C_CB_DATA_WIDTH">
-      <obj_property name="ElementShortName">C_CB_DATA_WIDTH</obj_property>
-      <obj_property name="ObjectShortName">C_CB_DATA_WIDTH</obj_property>
+   <wvobject type="other" fp_name="/EventDetector_tb/C_PEAK_TIME_RESOLUTION">
+      <obj_property name="ElementShortName">C_PEAK_TIME_RESOLUTION</obj_property>
+      <obj_property name="ObjectShortName">C_PEAK_TIME_RESOLUTION</obj_property>
    </wvobject>
-   <wvobject type="other" fp_name="/Top_tb/C_CB_SIZE">
-      <obj_property name="ElementShortName">C_CB_SIZE</obj_property>
-      <obj_property name="ObjectShortName">C_CB_SIZE</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/Top_tb/C_CB_COUNTER_BITS">
-      <obj_property name="ElementShortName">C_CB_COUNTER_BITS</obj_property>
-      <obj_property name="ObjectShortName">C_CB_COUNTER_BITS</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/Top_tb/C_CLK_PERIOD">
+   <wvobject type="other" fp_name="/EventDetector_tb/C_CLK_PERIOD">
       <obj_property name="ElementShortName">C_CLK_PERIOD</obj_property>
       <obj_property name="ObjectShortName">C_CLK_PERIOD</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/Top_tb/uut/S_EVENT_DETECTED">
-      <obj_property name="ElementShortName">S_EVENT_DETECTED</obj_property>
-      <obj_property name="ObjectShortName">S_EVENT_DETECTED</obj_property>
+   <wvobject type="other" fp_name="/EventDetector_tb/C_THRESHOLD1">
+      <obj_property name="ElementShortName">C_THRESHOLD1</obj_property>
+      <obj_property name="ObjectShortName">C_THRESHOLD1</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/EventDetector_tb/C_THRESHOLD2">
+      <obj_property name="ElementShortName">C_THRESHOLD2</obj_property>
+      <obj_property name="ObjectShortName">C_THRESHOLD2</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/EventDetector_tb/C_PEAK_TIME">
+      <obj_property name="ElementShortName">C_PEAK_TIME</obj_property>
+      <obj_property name="ObjectShortName">C_PEAK_TIME</obj_property>
    </wvobject>
 </wave_config>
